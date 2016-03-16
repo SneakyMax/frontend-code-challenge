@@ -4,8 +4,8 @@
   "description": "",
   "main": "app/server.js",
   "scripts": {
-    "start": "make",
-    "test": "make test"
+    "start": "gulp",
+    "test": "gulp test"
   },
   "author": "Kevin Garsjo",
   "license": "ISC",
@@ -29,6 +29,14 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-flatten": "^0.2.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-shell": "^0.5.2",
+    "gulp-wrap-amd": "^0.5.0",
     "karma-requirejs": "^0.2.2"
   }
 }
