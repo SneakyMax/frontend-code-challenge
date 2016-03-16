@@ -55,13 +55,12 @@ gulp.task("jade", ["jade-templates", "jade-runtime"]);
 gulp.task("jade-templates", ["clean"], () => {
     return gulp.src("public/js/**/*.tpl.jade")
         .pipe(jade({ client: true }))
-        .pipe(wrapAmd())
+        .pipe(wrapAmd({ deps: ["jade"], params: ["jade"] }))
         .pipe(gulp.dest("public/js"));
 });
 
 gulp.task("jade-runtime", ["clean"], () => {
     return gulp.src("node_modules/jade/runtime.js")
-        .pipe(wrapAmd())
         .pipe(rename("jade_runtime.js"))
         .pipe(gulp.dest(config.vendor_path));
 });

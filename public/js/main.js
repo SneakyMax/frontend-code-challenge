@@ -5,6 +5,7 @@ require.config({
     'jquery': 'vendor/jquery',
     'marionette': 'vendor/backbone.marionette',
     'underscore': 'vendor/underscore',
+    'jade': 'vendor/jade_runtime'
   },
 });
 
