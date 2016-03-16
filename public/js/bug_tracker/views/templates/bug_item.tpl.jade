@@ -4,9 +4,9 @@
     .bug_fields.column_l_7_10
       if editing
         .field
-          input(class='summary',type='text',placeholder='Summary',value='#{summary}')
+          input.summary-input(class='summary',type='text',placeholder='Summary',value='#{summary}')
         .field
-          textarea(class='description',placeholder='Description') #{description}
+          textarea.description-input(class='description',placeholder='Description') #{description}
       else
         .field
           h4.summary #{summary}
@@ -18,7 +18,9 @@
         .bug_mode.js_bug_save.material-icons save
       else
         .bug_mode.js_bug_edit.material-icons edit
-  if error
-    .bug_error_content
-      span.bug_error.material-icons cancel
-      span #{error}
+  
+  if errors
+    each value, key in errors
+      .bug_error_content
+        span.bug_error.material-icons cancel
+        span #{value}
