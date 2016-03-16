@@ -22,6 +22,7 @@ require.config({
     'marionette': 'vendor/backbone.marionette',
     'spin': 'vendor/spin',
     'underscore': 'vendor/underscore',
+    'jade': 'vendor/jade_runtime'
   },
 
   // dynamically load all test files
