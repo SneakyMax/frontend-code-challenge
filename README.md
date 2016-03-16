@@ -15,19 +15,19 @@ You do the following:
 
 1. Fork this repository
 1. Ensure you have NodeJS 4.4.0 LTS (or equivalent) installed
-1. Ensure you have `make` installed
+1. Ensure you have `gulp` installed (`npm install -g gulp-cli`)
 1. Search the project for `@TODO` comments which describe the missing implementation
 1. Implement the missing pieces, and test the implementation
 1. Email ImpactFlow with a link to your fork
 
 ### How do I build the project?
 1. Clone this repo
-1. To install all dependencies and build the project, run `make`
-1. To start the node server, run `make server`. You should be able to view the app by visiting `localhost:3000` in your browser.
-1. To run the tests, run `make test`. There will be a handful of starter tests which should pass.
+1. To install all dependencies and build the project, run `gulp`
+1. To start the node server, run `gulp server`. You should be able to view the app by visiting `localhost:3000` in your browser.
+1. To run the tests, run `gulp test`. There will be a handful of starter tests which should pass.
 
 ### How will I be graded?
-We'll be looking at how much impementation is completed, the style in which it is written, and the testing which covers it.
+We'll be looking at how much implementation is completed, the style in which it is written, and the testing which covers it.
 In general:
 - **DO** try to implement as much as you can
 - **DO** aim for clean code
