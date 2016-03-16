@@ -23,7 +23,10 @@ define([
       'click .js_refresh': 'refresh',
     },
 
-    // @TODO implement functions to handle 'addBug'
+    addBug: function() {
+      var newModel = new BugModel();
+      this.collection.add(newModel);
+    }
     // @TODO implement functions to handle 'refresh'
 
   });
