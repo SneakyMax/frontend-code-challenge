@@ -41,7 +41,9 @@ define([
       this.render();
     },
 
-    editBug: function() {},
+    editBug: function() {
+      this.model.set('editing', true);
+    },
 
     saveBug: function() {
       this.model.set({
@@ -55,7 +57,11 @@ define([
       }
     },
 
-    removeBug: function() {},
+    // In a real application this would need either confirmation (eh) or undo-ing (yay)
+    removeBug: function() {
+      // 'destroy' event will bubble up and automatically remove this from any collections.
+      this.model.destroy();
+    },
 
     showError: function() {
       this.render();

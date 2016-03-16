@@ -55,5 +55,22 @@ define([
 
       expect(view.model.get('editing')).toBe(true);
     });
+
+    it('should start editing when editBug is called', function() {
+      model.set('editing', false);
+
+      view.editBug();
+
+      expect(view.model.get('editing')).toBe(true);
+    });
+
+    it('should destroy the object when it is deleted', function() {
+      var isRemoved = false;
+      model.on('destroy', function() { isRemoved = true; });
+
+      view.removeBug();
+
+      expect(isRemoved).toBe(true);
+    });
   });
 });
