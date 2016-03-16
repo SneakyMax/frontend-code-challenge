@@ -22,6 +22,7 @@ You do the following:
 
 ### How do I build the project?
 1. Clone this repo
+1. Run `npm install`
 1. To install all dependencies and build the project, run `gulp`
 1. To start the node server, run `gulp server`. You should be able to view the app by visiting `localhost:3000` in your browser.
 1. To run the tests, run `gulp test`. There will be a handful of starter tests which should pass.
