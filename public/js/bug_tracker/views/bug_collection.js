@@ -26,9 +26,11 @@ define([
     addBug: function() {
       var newModel = new BugModel();
       this.collection.add(newModel);
-    }
-    // @TODO implement functions to handle 'refresh'
+    },
 
+    refresh: function() {
+      this.collection.fetch();
+    }
   });
 
   return BugCollectionView;

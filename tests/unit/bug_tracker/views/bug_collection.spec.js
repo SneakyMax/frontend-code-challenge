@@ -37,5 +37,12 @@ define([
       var bug = collection.at(0);
       expect(bug.isValid()).toBe(false);
     });
+
+    it('should fetch new models from the server when refreshed', function() {
+      // Fetch is just a backbone magicness, so we only really have to test that it's called...
+      spyOn(collection, 'fetch');
+      view.refresh();
+      expect(collection.fetch).toHaveBeenCalled();
+    });
   });
 });

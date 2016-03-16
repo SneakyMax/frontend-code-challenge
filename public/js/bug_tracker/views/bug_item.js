@@ -12,8 +12,8 @@ define([
       'click .js_bug_save': 'saveBug',
       'click .bug_remove': 'removeBug',
 
-      'input .summary-input': 'updateSummary', // I don't really like this, but don't know of a better way of doing it in marionette?
-      'input .description-input': 'updateDescription'
+      'input .summary-input': 'updateSummary', // I had to edit the templates and I'm not too big of a fan of referencing classes directly
+      'input .description-input': 'updateDescription' // in a view (used to two-way data binding), maybe there's a better way in marionette?
     },
 
     templateHelpers: function () {
@@ -78,10 +78,7 @@ define([
       this.description = event.target.value;
     }
 
-    // @TODO implement functions to handle 'editBug'
-    // @TODO implement functions to handle 'saveBug'
-    // @TODO implement functions to handle 'removeBug'
-
+    // I'm actually not sure what needs to be implemted for this? saveBug handles the validation here, and the UI acts just fine.
     // @TODO implement function to handle an 'invalid' event from the model
 
   });
